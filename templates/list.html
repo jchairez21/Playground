@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Random Numbers</h1>
+    {% for num in random_numbers %}
+        <p> {{ num }} </p>
+    {% endfor %}
+    <h1>Studen Info</h1>
+    {% for student in students %}
+    <p><a href="/">{{ student }} </a></p>
+    {% endfor %}
+    <a href="/game" class="btn btn-primary">Game Time</a>
+    <h2>Example 2</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for chicken in students %}
+            <tr>
+                <td>{{ chicken['name'] }}</td>
+                <td>{{ chicken['age'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
